@@ -49,7 +49,7 @@ netEase.app = {};//应用层
 		var oTop = document.getElementById('top');
 		var oClose = document.getElementsByClassName('close')[0];
 	    //页面加载时检测cookie
-		if(netEase.ui.getCookie("topAd")==="true"){
+		if(netEase.ui.getCookie("topNotice")==="true"){
 			oTop.style.display = "none";
 		}else{
 			oTop.style.display = "block";
@@ -57,6 +57,6 @@ netEase.app = {};//应用层
 		//关闭广告
 		oClose.onclick=function(){
 			oTop.style.display="none";
-			netEase.ui.setCookie("topAd","true","365");
+			netEase.ui.setCookie("topNotice","true","365");
 		};		
 	};

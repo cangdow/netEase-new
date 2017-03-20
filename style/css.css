@@ -3,7 +3,7 @@ body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{margin:0;
 li{list-style: none;}
 img{border:none;}
 a{text-decoration: none;}
-a:hover{text-decoration: underline;}
+a:hover{text-decoration: none;}
 
 #top{z-index: 999;
 	background:url(../images/top_notice_bg.gif) repeat-x;}
@@ -13,3 +13,27 @@ a:hover{text-decoration: underline;}
 	background:url(../images/close.png) no-repeat;}
 #top .close:hover{background:url(../images/close.png) no-repeat 0 -36px;color: #21a557;}
 #top p{padding-left: 15px;}
+
+#header{width: 1202px;height: 89px;margin:0 auto;}
+
+.h_side{float:left;height:22px;line-height: 22px;margin-top: 30px;padding-bottom: 4px;
+	background: url(../images/edu.png) no-repeat 0 4px;padding-left: 83px;}
+.h_side h1{float:left;font-size: 22px;color: #333;margin-right: 31px;}
+.h_side a{float:left;color:#fff;display: inline-block;width: 54px;height: 21px;background: #21a557;
+	border-radius: 1px;line-height: 21px;text-align: center;font-size: 12px;margin:2px 14px;}
+.h_side a:hover{background: #00be5a;}
+.h_side span{float:left;font-size: 12px;color:#666;margin-top: 2px;}
+
+#header ul{float: right;line-height: 89px;}
+#header li{float: left;}
+#header ul a{color: #666;font-size: 16px;font-family: initial;}
+#header .nav1{margin-right: 54px;}
+#header .nav2{margin-right: 56px;}
+#header .nav3{margin-right: 30px;}
+#header .search{width: 19px;height: 19px;margin-right: 14px;display: inline-block;
+	background: url(../images/search.png) no-repeat;}
+#header .search:hover{background: url(../images/search.png) no-repeat -1px -19px;}
+#header ul a:hover{color: #00aa2b;}
+
+
+
