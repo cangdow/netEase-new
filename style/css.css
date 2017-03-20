@@ -1,0 +1,15 @@
+body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{margin:0;
+	padding:0;font-family:"Microsoft Yahei",serif;}
+li{list-style: none;}
+img{border:none;}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+#top{z-index: 999;
+	background:url(../images/top_notice_bg.gif) repeat-x;}
+#top .top_notice{width:1202px;height: 36px;font-size: 12px;line-height: 36px;margin:0 auto;}
+#top a{color: #21a557;margin-left: 12px;}
+#top .close{cursor: pointer;width:64px;height: 36px;float: right;
+	background:url(../images/close.png) no-repeat;}
+#top .close:hover{background:url(../images/close.png) no-repeat 0 -36px;color: #21a557;}
+#top p{padding-left: 15px;}
