@@ -4,6 +4,7 @@ window.onload = function(){
 	netEase.app.topNotice();
 	netEase.app.toBanner();
 	netEase.app.toScroll();
+	netEase.app.toChangeColor();
 };
 
 var netEase = {};//命名空间
@@ -178,6 +179,21 @@ netEase.app = {};//应用层
 		}
 		timer = setInterval(scroll,50);
 	};
+	netEase.app.toChangeColor = function(){
+		var oCourse = document.getElementById('course');
+		var aLi = oCourse.getElementsByTagName('li');
+		var aH3 = oCourse.getElementsByTagName('h3');
+
+		for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			aLi[i].onmouseover = function(){
+				aH3[this.index].style.color = "#39a030";
+			};
+			aLi[i].onmouseout = function(){
+				aH3[this.index].style.color = "#5a5a5a";
+			};
+		}
+	}
 
 
 
