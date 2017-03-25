@@ -5,7 +5,6 @@ window.onload = function(){
 	netEase.app.toBanner();
 	netEase.app.toScroll();
 	netEase.app.toChangeColor();
-	netEase.app.setAjax();
 };
 
 var netEase = {};//命名空间
@@ -254,41 +253,39 @@ netEase.app = {};//应用层
 			};
 		}
 	}
-	netEase.app.setAjax = function(){
-		netEase.tools.ajax({
-		    method : 'get',
-		    url : 'http://study.163.com/webDev/couresByCategory.htm',
-		    data : {
-		        'pageNo':'1',
-		        'psize':'20',
-		        'type':'10'
-		    },
-		    success : function (data) {
-		        console.log(data);
-		        var _data= JSON.parse(data);
-		        var oDiv = document.getElementById("okdklkd");
-		        for(i=0;i<_data.list.length;i++){
-			var oLi = document.createElement("li");
-			oDiv.appendChild(oLi);
-			var _img = document.createElement("img");
-			var _name = document.createElement("p");
-			var _price = document.createElement("p");
-			var _description = document.createElement("p");
-			_img.setAttribute("id", "okmy");
-			_img.setAttribute("src", _data.list[i].bigPhotoUrl);
-			_name.setAttribute("class", "okmyy");
-			_name.innerHTML=_data.list[i].name;
-			_price.innerHTML="价格："+_data.list[i].price;
-			_description.innerHTML=_data.list[i].description;
-			oLi.appendChild(_img);
-			oLi.appendChild(_name);
-			oLi.appendChild(_price);
-			oLi.appendChild(_description);
-		        }
-		    },
-		    async : true
-		});		
-	};
+	ajax({
+	    method : 'get',
+	    url : 'http://study.163.com/webDev/couresByCategory.htm',
+	    data : {
+	        'pageNo':'1',
+	        'psize':'20',
+	        'type':'10'
+	    },
+	    success : function (data) {
+	        console.log(data);
+	        var _data= JSON.parse(data);
+	        var oDiv = document.getElementById("okdklkd");
+	        for(i=0;i<_data.list.length;i++){
+		var oLi = document.createElement("li");
+		oDiv.appendChild(oLi);
+		var _img = document.createElement("img");
+		var _name = document.createElement("p");
+		var _price = document.createElement("p");
+		var _description = document.createElement("p");
+		_img.setAttribute("id", "okmy");
+		_img.setAttribute("src", _data.list[i].bigPhotoUrl);
+		_name.setAttribute("class", "okmyy");
+		_name.innerHTML=_data.list[i].name;
+		_price.innerHTML="价格："+_data.list[i].price;
+		_description.innerHTML=_data.list[i].description;
+		oLi.appendChild(_img);
+		oLi.appendChild(_name);
+		oLi.appendChild(_price);
+		oLi.appendChild(_description);
+	        }
+	    },
+	    async : true
+	});		
 	
 /*以下还有不少不大理解的地方,参考网友的大部分方法.*/
 
